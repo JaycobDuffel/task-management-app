@@ -7,4 +7,4 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     task = TaskSerializer(many=True, read_only=True)
     class Meta:
         model = Project
-        fields = ('pk', 'title', 'description', 'task')
+        fields = ('pk', 'title', 'description')
