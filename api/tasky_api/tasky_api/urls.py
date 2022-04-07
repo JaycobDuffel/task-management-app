@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from tasky_api.views import task
+from tasky_api.views import task, project, stage
 
 router = routers.DefaultRouter()
 
-router.register(r'Task', task.TaskViewSet)
+router.register(r'task', task.TaskViewSet)
+router.register(r'project', project.ProjectViewSet)
+router.register(r'stage', stage.StageViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
