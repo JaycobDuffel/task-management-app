@@ -2,7 +2,7 @@ from django.db import models
 from .project import Project
 
 class Stage(models.Model):
-    title = models.CharField(max_length=30, unique=True)
+    title = models.CharField(max_length=30)
     order = models.IntegerField(blank=True)
     projects = models.ManyToManyField(Project, blank=True)
 
