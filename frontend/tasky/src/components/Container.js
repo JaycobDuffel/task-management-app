@@ -1,9 +1,20 @@
 import React from 'react';
 
-const Container = () => {
+import '../styles/Container.css';
+import Stage from './Stage';
+
+const Container = ({project}) => {
 return (
-  <div style={{height: '90%', width: '100%'}}>
-    <h1>Container</h1>
+  <div className='container'>
+    <div className='project-info'>
+      <h2>{project.name}</h2>
+    </div>
+    <div className='project-container'>
+      <Stage stage={{name: "To Do"}} />
+      <Stage stage={{name: "In Progress"}} />
+      <Stage stage={{name: "In Review"}} />
+      <Stage stage={{name: "Complete"}} />
+    </div>
   </div>
 )
 }

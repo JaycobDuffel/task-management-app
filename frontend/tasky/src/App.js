@@ -1,5 +1,5 @@
 import ApiService from "./api/baseAPI";
-import './App.css';
+import './styles/App.css';
 import Container from "./components/Container";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   const api = new ApiService();
   return (
     <div className="App">
-      <Container />
+      <Container project={{name: "Tasky"}} />
     </div>
   );
 }
